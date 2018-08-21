@@ -10,6 +10,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 body {
 	overflow: hidden;
 	color: #535353;
+	background-color: rgba(20,85,143,0.1);
 	font-family: "Texta", "Helvetica", "Arial", "sans-serif" !important;
 	font-weight: 400;
 	font-size: 1.375rem;
