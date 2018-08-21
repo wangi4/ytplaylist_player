@@ -6,8 +6,7 @@ Everyone is permitted to copy and distribute verbatim copies of this license doc
 */
 
 // API key to use the YouTube API
-var apiKey = "AIzaSyDbwI3YwWxbg105jMVDcKOWl348UKHmIMw";
-//var apiKey = "AIzaSyDag4I45HFd7eS92OQYOZa-71ftsJRZoIo";
+var apiKey = config.YT_KEY;
 
 // Max number of results to get (min is 0, max is 50)
 var numMaxResults = 50;
@@ -102,13 +101,10 @@ function pageHeightWidth() {
 		g = d.getElementsByTagName('body')[0],
 		x = w.innerWidth || e.clientWidth || g.clientWidth,
 		y = w.innerHeight || e.clientHeight || g.clientHeight;
-	console.log('x = ' + x + ': y = ' + y);
 
 	vidPlayerHeight = y;
 	vidPlayerWidth = x;
 	console.log("height = " + vidPlayerHeight + " width = " + vidPlayerWidth);
-	/** height = 831.6 width = 754 **/
-
 }
 
 // Builds the appropriate divs on the HTML page for the playlist and youtube player to populate into.
@@ -129,7 +125,7 @@ function buildHTMLPlayerDivs() {
 		var $newdiv1 = "<div id='= " + playlistsContainerID + "'  class='ia7__row'> <div class='ia7__yt-video-playlist'> <div class='ia7__video-column'> <div class='ia7__yt-video' id='ytplayer" + i + "' style='height: " + vidPlayerHeight + ";' width: " + vidPlayerWidth + ";></div> <div class='ia7__yt-vid-description' style=' width: " + vidPlayerWidth + ";'></div> </div> <div class='ia7__playlist-column'> <h4 class='ia7__playlist-title ma__comp-heading'>Playlist</h4> <div class='ia7__playlist-container' style=' width: " + vidPlayerWidth + ";'> <div class='ia7__playlist-results ia7__row'> </div> </div> </div> </div> </div>";
 
 		htmlTarget.append($newdiv1, $newContainer);
-		console.log("pass: " + playlistsContainerID + "/n" + $newdiv1);
+		//console.log("pass: " + playlistsContainerID + "/n" + $newdiv1);
 	}
 
 }
